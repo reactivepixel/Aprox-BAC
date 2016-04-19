@@ -13,7 +13,11 @@ export default class Input extends React.Component {
       <label>
         {this.props.title} <small>{this.props.subTitle}<sup>{this.props.sup}</sup></small>
       </label>
-      <input type='text' className='form-control' placeholder={this.props.placeholder} />
+      <input type='text' className='form-control' placeholder={this.props.gender} />
+      <label>
+        {this.props.title} <small>{this.props.subTitle}<sup>{this.props.sup}</sup></small>
+      </label>
+      <input type='text' className='form-control' placeholder={this.props.weight} />
     </div>
   }
 };
