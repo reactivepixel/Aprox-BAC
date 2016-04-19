@@ -4,8 +4,6 @@ import React from 'react';
 import * as actionCreators from '../action_creators';
 
 import TempComponent from './TempComponent';
-
-
 import PureRenderMixin from 'react-addons-pure-render-mixin';
 
 export default class Dashboard extends React.Component {
@@ -16,7 +14,7 @@ export default class Dashboard extends React.Component {
   render() {
     return <div>
       <section id="container">
-        <TempComponent {...this.props} changeFilter={this.props.changeFilter} />
+        <TempComponent {...this.props} dispTitle="derp" changeFilter={this.props.changeFilter} />
       </section>
     </div>
   }
@@ -26,7 +24,7 @@ export default class Dashboard extends React.Component {
 function mapStateToProps(state){
     return {
       items: state.get('items'),
-      filter:state.get('filter')
+      filter: state.get('filter')
     }
 }
 
