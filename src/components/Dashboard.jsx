@@ -3,12 +3,12 @@ import React from 'react';
 
 import * as actionCreators from '../action_creators';
 
-import ItemsTableBasic from './ItemsTableBasic';
-import ItemInput from './ItemInput';
+import DataCollection from './DataCollection';
+
 
 import PureRenderMixin from 'react-addons-pure-render-mixin';
 
-export default class AdminApp extends React.Component {
+export default class Dashboard extends React.Component {
   constructor(props) {
     super(props);
     this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this);
@@ -16,8 +16,7 @@ export default class AdminApp extends React.Component {
   render() {
     return <div>
       <section id="container">
-        <ItemsTableBasic {...this.props} changeFilter={this.props.changeFilter} />
-        <ItemInput />
+        <DataCollection {...this.props} changeFilter={this.props.changeFilter} />
       </section>
     </div>
   }
@@ -31,4 +30,4 @@ function mapStateToProps(state){
     }
 }
 
-export const AdminContainer = connect(mapStateToProps, actionCreators)(AdminApp);
+export const DashboardContainer = connect(mapStateToProps, actionCreators)(Dashboard);

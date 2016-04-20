@@ -10,12 +10,13 @@ export default class DataCollection extends React.Component {
   render() {
 
     return <div className="form-group col-sm-3">
+      <h1>Basic Information</h1>
       <label>
-        {this.props.title} <small>{this.props.subTitle}<sup>{this.props.sup}</sup></small>
+        Weight <small>(lbs.)</small>
       </label>
       <input type='text' className='form-control' placeholder={this.props.weight} />
       <label>
-        {this.props.title} <small>{this.props.subTitle}<sup>{this.props.sup}</sup></small>
+        Gender <small>(male)</small>
       </label>
       <input type='text' className='form-control' placeholder={this.props.gender} />
     </div>

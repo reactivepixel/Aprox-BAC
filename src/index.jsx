@@ -5,7 +5,7 @@ import {compose, createStore} from 'redux';
 import {Provider} from 'react-redux';
 import reducer from './reducer';
 
-import {AdminContainer} from './components/AdminApp';
+import {DashboardContainer} from './components/Dashboard';
 
 const createStoreDevTools = compose(
   window.devToolsExtension ? window.devToolsExtension() : f => f
@@ -28,9 +28,6 @@ store.dispatch({
 
 import './client/assets/bs3/css/bootstrap.min.css';
 import './client/assets/css/bootstrap-reset.css';
-// Causing errors
-// import './client/assets/font-awesome/css/font-awesome.css'
-// import 'font-awesome-webpack';
 
 import './client/assets/css/style.css';
 import './client/assets/css/style-responsive.css';
@@ -39,7 +36,7 @@ import './client/assets/css/bootstrap-reset.css';
 ReactDOM.render(
     // Redux wrapps a Provider around the app.
     <Provider store={store}>
-      <AdminContainer />
+      <DashboardContainer />
     </Provider>,
     document.getElementById('app')
 );
