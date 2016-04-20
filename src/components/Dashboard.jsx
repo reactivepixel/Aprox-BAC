@@ -3,7 +3,7 @@ import React from 'react';
 
 import * as actionCreators from '../action_creators';
 
-import TempComponent from './TempComponent';
+import DrinkInput from './DrinkInput';
 
 
 import PureRenderMixin from 'react-addons-pure-render-mixin';
@@ -16,7 +16,7 @@ export default class Dashboard extends React.Component {
   render() {
     return <div>
       <section id="container">
-        <TempComponent {...this.props} changeFilter={this.props.changeFilter} />
+        <DrinkInput {...this.props} changeFilter={this.props.changeFilter} />
       </section>
     </div>
   }
