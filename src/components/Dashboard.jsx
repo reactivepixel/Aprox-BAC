@@ -3,9 +3,8 @@ import React from 'react';
 
 import * as actionCreators from '../action_creators';
 
-
+import BacMeter from './BacMeter';
 import DrinkInput from './DrinkInput';
-
 import TempComponent from './TempComponent';
 import Bar from './Bar';
 import DataCollection from './DataCollection';
@@ -21,11 +20,10 @@ export default class Dashboard extends React.Component {
   render() {
     return <div>
       <section id="container">
+        <BacMeter {...this.props} bacPercent={100} changeFilter={this.props.changeFilter} />
         <DrinkInput {...this.props} changeFilter={this.props.changeFilter} />
-
         <Bar bacPercent="35" bac=".06" numOfDrinks="4" />
         <TempComponent {...this.props} dispTitle="derp" changeFilter={this.props.changeFilter} />
-        <DataCollection {...this.props} changeFilter={this.props.changeFilter} />
       </section>
     </div>
   }
