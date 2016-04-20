@@ -17,14 +17,46 @@ const store = createStoreDevTools(reducer);
 store.dispatch({
   type: 'SET_STATE',
   state: {
-    items: [
-      {id: 1, name: 'Wand of Wasting', rarity: 'Uncommon', isActive: false, editing: false},
-      {id: 2, name: 'Ice laden Sword', rarity: 'Common', isActive: false, editing: true},
-      {id: 3, name: 'Orphan\'s Tear', rarity: 'Rare', isActive: false, editing: false}
+    name: "John Doe",
+    facebookID: null,
+    location: null,
+    alcLevel: 0,
+    drinksConsumed: [],
+    drinkTypes: [
+    {
+    	type: "Beer",
+    	bac: .05,
+    	mods: ["A", "B", "C"]
+    },
+    {
+    	type: "Wine",
+    	bac: .12,
+    	mods: ["A", "B", "C"]
+    },
+    {
+    	type: "Shot",
+    	bac: .4,
+    	mods: ["A", "B", "C"]
+    },
+    {
+      type: "Cocktail",
+      bac: .4,
+    	mods: ["A", "B", "C"]
+    }
     ],
-    filter: 'all'
+    driveStatus: true
   }
 });
+
+// Test of add drink with structure
+// store.dispatch({
+//   type: 'ADD_DRINK',
+//   drink:{
+//       type: 'Beer',
+//       time: new Date(),
+//       activeMods: ["A"]
+//   }
+// });
 
 import './client/assets/bs3/css/bootstrap.min.css';
 import './client/assets/css/bootstrap-reset.css';
