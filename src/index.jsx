@@ -17,12 +17,34 @@ const store = createStoreDevTools(reducer);
 store.dispatch({
   type: 'SET_STATE',
   state: {
-    items: [
-      {id: 1, name: 'Wand of Wasting', rarity: 'Uncommon', isActive: false, editing: false},
-      {id: 2, name: 'Ice laden Sword', rarity: 'Common', isActive: false, editing: true},
-      {id: 3, name: 'Orphan\'s Tear', rarity: 'Rare', isActive: false, editing: false}
+    name: "John Doe",
+    facebookID: null,
+    location: null,
+    alcLevel: 0,
+    consumedDrinks:[],
+    drinkTypes: [
+    {
+    	type: "Beer",
+    	bac: .05,
+    	mods: ["Draft", "Bottle", "Can"]
+    },
+    {
+    	type: "Wine",
+    	bac: .12,
+    	mods: ["Red", "White"]
+    },
+    {
+    	type: "Shot",
+    	bac: .4,
+    	mods: ["Half", "Full", "Double"]
+    },
+    {
+      type: "Cocktail",
+      bac: .4,
+    	mods: ["Small", "Large"]
+    }
     ],
-    filter: 'all'
+    driveStatus: true
   }
 });
 
