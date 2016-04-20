@@ -7,8 +7,6 @@ import BacMeter from './BacMeter';
 import DrinkInput from './DrinkInput';
 import TempComponent from './TempComponent';
 import Bar from './Bar';
-import DataCollection from './DataCollection';
-
 
 import PureRenderMixin from 'react-addons-pure-render-mixin';
 
