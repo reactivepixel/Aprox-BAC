@@ -56,9 +56,9 @@ import './client/assets/css/style-responsive.css';
 import './client/assets/css/bootstrap-reset.css';
 
 ReactDOM.render(
-    // Redux wrapps a Provider around the app.
-    <Provider store={store}>
-      <DashboardContainer />
-    </Provider>,
-    document.getElementById('app')
+  // Redux wrapps a Provider around the app.
+  <Provider store={store}>
+    <DashboardContainer />
+  </Provider>,
+  document.getElementById('app')
 );
