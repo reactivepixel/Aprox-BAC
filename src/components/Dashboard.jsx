@@ -6,6 +6,7 @@ import * as actionCreators from '../action_creators';
 import BacMeter from './BacMeter';
 import DrinkInput from './DrinkInput';
 import TempComponent from './TempComponent';
+import DataCollection from './DataCollection';
 
 import PureRenderMixin from 'react-addons-pure-render-mixin';
 
@@ -20,6 +21,8 @@ export default class Dashboard extends React.Component {
         <BacMeter {...this.props} bacPercent={100} changeFilter={this.props.changeFilter} />
         <DrinkInput {...this.props} changeFilter={this.props.changeFilter} />
         <TempComponent {...this.props} dispTitle="derp" changeFilter={this.props.changeFilter} />
+        <DataCollection {...this.props} changeFilter={this.props.changeFilter} />
+      </section>
     </div>
   }
 };
