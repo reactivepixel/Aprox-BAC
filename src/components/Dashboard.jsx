@@ -3,6 +3,7 @@ import React from 'react';
 
 import * as actionCreators from '../action_creators';
 
+import BacMeter from './BacMeter';
 import DrinkInput from './DrinkInput';
 import Bar from './Bar';
 
@@ -17,7 +18,7 @@ export default class Dashboard extends React.Component {
     return <div>
       <section id="container">
         <DrinkInput info={this.props.drinkTypes} changeFilter={this.props.changeFilter} />
-        <Bar bacPercent="35" bac=".06" numOfDrinks="4" />
+        <BacMeter {...this.props} bacPercent={85} bacLevel={.06} changeFilter={this.props.changeFilter} />
       </section>
     </div>
   }

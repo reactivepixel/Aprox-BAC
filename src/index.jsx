@@ -21,7 +21,7 @@ store.dispatch({
     facebookID: null,
     location: null,
     alcLevel: 0,
-    consumedDrinks:[],
+    drinksConsumed: [],
     drinkTypes: [
     {
     	type: "Beer",
@@ -47,6 +47,16 @@ store.dispatch({
     driveStatus: true
   }
 });
+
+// Test of add drink with structure
+// store.dispatch({
+//   type: 'ADD_DRINK',
+//   drink:{
+//       type: 'Beer',
+//       time: new Date(),
+//       activeMods: ["A"]
+//   }
+// });
 
 import './client/assets/bs3/css/bootstrap.min.css';
 import './client/assets/css/bootstrap-reset.css';
