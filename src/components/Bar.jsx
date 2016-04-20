@@ -12,7 +12,7 @@ export default class Bar extends React.Component {
       width: this.props.bacPercent + '%'
     };
 
-    return <div>    
+    return <div>
       <h2>Current Alcohol Level</h2>
       <div className="progress progress-striped active progress-sm">
           <div className="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="{this.props.bacPercent}" aria-valuemin="0" aria-valuemax="100" style={barStyle}>
