@@ -5,6 +5,8 @@ import * as actionCreators from '../action_creators';
 
 import DrinkInput from './DrinkInput';
 
+import TempComponent from './TempComponent';
+import Bar from './Bar';
 
 import PureRenderMixin from 'react-addons-pure-render-mixin';
 
@@ -16,7 +18,12 @@ export default class Dashboard extends React.Component {
   render() {
     return <div>
       <section id="container">
+
         <DrinkInput {...this.props} changeFilter={this.props.changeFilter} />
+
+        <Bar bacPercent="35" bac=".06" numOfDrinks="4" />
+        <TempComponent {...this.props} dispTitle="derp" changeFilter={this.props.changeFilter} />
+
       </section>
     </div>
   }
@@ -26,7 +33,7 @@ export default class Dashboard extends React.Component {
 function mapStateToProps(state){
     return {
       items: state.get('items'),
-      filter:state.get('filter')
+      filter: state.get('filter')
     }
 }
 
